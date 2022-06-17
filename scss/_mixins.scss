@@ -1,0 +1,27 @@
+@mixin botones ($padding) {
+    
+    font-size: 1rem;
+    border-radius: .5em;
+    background-color: grey;
+    color: white  ;
+    padding: $padding;
+
+}
+
+
+.btn-sm{
+@include botones(0)
+}
+.btn-md {
+@include botones(.2em .5em)
+}
+.btn-lg {
+@include botones(.5em .75em)
+}
+
+@mixin colorBoton ($colorBoton) {
+    background-color: $colorBoton;
+    color: black;
+    
+}
+

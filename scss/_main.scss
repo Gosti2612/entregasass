@@ -4,7 +4,7 @@ font-family: 'Poppins', sans-serif;
 }
 
 body{
-    background-color: #d3d3d3;
+    background-color:  #d3d3d3;
     background-image: linear-gradient(315deg, #d3d3d3 0%, #eccc68 74%); 
 }
 
@@ -12,14 +12,15 @@ body{
 
     display: grid;
     grid-template-columns: repeat(12,1fr);
-    grid-template-rows: 80px 450px 400px;
+    grid-template-rows: 90px 80px 450px 400px;
     @media all and (max-width: 768px) {
             display: grid;        
         }
 
+}
     .encabezado{
         grid-column: 3/12;
-        grid-row: 1;
+        grid-row: 2;
         padding-left: 2rem;
         padding-top: 40px;
         font-family: 'Poppins', sans-serif;
@@ -58,4 +59,174 @@ body{
         grid-column: 4/6;
             }
     }
+    
+    .segundoTitulo {
+        grid-column: 3/12;
+        grid-row: 3;
+        padding-left: 2rem;
+        padding-top: 40px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 2rem;
+        @media all and (max-width: 768px) {
+            grid-row: 1/2;
+            font-size: 1.4rem;
+            padding-bottom: -3rem;
+    }
+}
+
+.btn {
+    font-size: 2rem;
+    background-color: blue;
+    color: white;
+}
+
+
+.btn-mixin-small {
+    @include colorBoton(black)
+}
+
+.btn-mixin-medium  {
+    @include colorBoton(blue)
+}
+
+.btn-mixin-large {
+    @include colorBoton (gold)
+}
+
+.botonIndex {
+    background-color: red;
+}
+
+
+/* GRIDS QUIENES SOMOS DESKTOP*/
+
+.contenedorQuienesSomos {
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: 200px 1fr 1fr;
+}
+
+.tituloQuienesSomos {
+    grid-column: 3/5;
+    grid-row: 1;
+    padding-left: 15px;
+    padding-top: 40px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.imagenQuienesSomos1 {
+    grid-column: 2/4;
+    grid-row: 2/3;
+}
+
+.textoImagen1 {
+    grid-column: 4/6;
+    grid-row: 2/3;
+    font-family: 'Poppins', sans-serif; 
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.imagenQuienesSomos2 {
+    grid-column: 2/4;
+    grid-row: 3/4;
+    padding-top: 2rem;
+}
+
+.textoImagen2 {
+    grid-column: 4/6;
+    grid-row: 3/4;
+    font-family: 'Poppins', sans-serif; 
+    font-size: 1.8rem;
+    text-align: center;
+    padding-top: 2rem;
+    
+}
+
+/* GRIDS MOBILE INDEX*/
+
+@media all and (max-width: 768px) {
+    .contenedorIndex{
+        display: grid;
+        grid-template-columns: 
+        grid-template-rows: 80px 400px 400px;
+    
+    }
+    .encabezado {
+        grid-row: 1/2;
+        font-size: 1.4rem;
+        padding-bottom: -3rem;
+    }
+
+    .imagenIndex {
+margin-bottom: 2rem;
+align-items: center;
+grid-column: 4/6;
+    }
+    
+    .textoIndex1 {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    }
+
+@media all and (max-width: 627px) {
+    .contenedorIndex{
+        display: grid;
+        grid-template-columns: 
+        grid-template-rows: 60px 200px 020px;
+    
+    }
+    .encabezado {
+        grid-row: 1/2;
+        font-size: 1.4rem;
+        padding-bottom: -3rem;
+    }
+
+    .imagenIndex {
+        margin-bottom: 1rem;
+        align-items: center;
+        grid-column: 3/5;
+        height: 280px;
+        margin-top: 40px;  
+        margin-left: 25px;  }
+    
+    .textoIndex1 {
+        font-size: 0.8rem;
+        margin-bottom: 2rem;
+    }
+}
+
+@media all and (max-width: 1100px min-width:628px) {
+    .textoIndex1 {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        padding-bottom: 15px;
+    }
+
+}
+
+.contenedorCarousel {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.textoImagen2 {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+    text-align: center;
+}
+
+.subtituloQuienes {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
 }
